@@ -136,7 +136,7 @@ func processChannelFile(w *zip.Writer, file *zip.File, inBuf []byte) error {
 			}
 
 			// Build the output file path.
-			outputPath := "__uploads/" + file.Id + "/" + file.Name
+			outputPath := "__uploads/" + file.Id + "_" + file.Name
 
 			// Create the file in the zip output file.
 			outFile, err := w.Create(outputPath)
